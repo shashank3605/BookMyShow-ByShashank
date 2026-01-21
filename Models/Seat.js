@@ -32,6 +32,12 @@ const seatSchema = new mongoose.Schema(
       ref: "ShowTime",
       required: true,
     },
+    reservedUntil: { type: Date, default: null },
+    reservedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "user",
+      default: null,
+    },
   },
   { timestamps: true }
 );

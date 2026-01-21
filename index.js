@@ -8,7 +8,7 @@ const seatRoutes = require("./Route/Seat");
 const orderRoutes = require("./Route/order");
 const database = require("./config/database");
 const helmet = require("helmet");
-
+require("./Utility/releaseExpiredSeats");
 const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const cookieParser = require("cookie-parser");
